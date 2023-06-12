@@ -13,3 +13,9 @@ jobs:
         uses: cypress-io/github-action@v5
         with: 
           browser: chrome
+          
+      - uses: actions/upload-artifact@v3
+        with:
+          name: cypress-videos
+          path: cypress/videos
+          if-no-files-found: ignore # 'warn' or 'error' are also available, defaults to `warn`
